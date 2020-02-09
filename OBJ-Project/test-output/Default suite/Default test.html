@@ -1,0 +1,758 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>79/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Feb 08 18:51:54 EST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>33 seconds (33808 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://cookiepedia.co.uk/giving-consent-to-cookies</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace841262455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace841262455'><pre>java.lang.AssertionError: expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://onetrust.com/poweredbyonetrust</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1305935114", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1305935114'><pre>java.lang.AssertionError: expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: ACCOUNT, </td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1201454821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1201454821'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Help@objectivewellness.com, mailto:help@objectivewellness.com</td>
+<td><div><pre>java.lang.ClassCastException: sun.net.www.protocol.mailto.MailToURLConnection cannot be cast to java.net.HttpURLConnection
+	at links.httpURLConnection.verifyURLStatus(httpURLConnection.java:121)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:69)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace817686795", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817686795'><pre>java.lang.ClassCastException: sun.net.www.protocol.mailto.MailToURLConnection cannot be cast to java.net.HttpURLConnection
+	at links.httpURLConnection.verifyURLStatus(httpURLConnection.java:121)
+	at links.httpURLConnection.testCheckLinks(httpURLConnection.java:69)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Privacy Policy, https://www.thecloroxcompany.com/privacy/</td>
+<td></td>
+<td>2</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: LIMITED TIME: FREE SHIPPING FOR ALL NEW CUSTOMERS, https://www.objectivewellness.com/gallery</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: SHOP, https://www.objectivewellness.com/gallery</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: JOURNAL, https://www.objectivewellness.com/journal</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: .CLS-1{FILL:#231F20;}ASSET 37, https://www.objectivewellness.com/</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/3-surprising-ways-to-fall-asleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: 3 Surprising Ways to Fall Asleep, https://www.objectivewellness.com/journal/posts/3-surprising-ways-to-fall-asleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/3-surprising-ways-to-fall-asleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/is-the-worlds-most-expensive-spice-worth-it-for-a-good-nights-sleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Is the World’s Most Expensive Spice Worth It for a Good Night’s Sleep? , https://www.objectivewellness.com/journal/posts/is-the-worlds-most-expensive-spice-worth-it-for-a-good-nights-sleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/is-the-worlds-most-expensive-spice-worth-it-for-a-good-nights-sleep</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/dangers-of-blue-light-and-screen-time</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Dangers of Blue Light and Screen Time , https://www.objectivewellness.com/journal/posts/dangers-of-blue-light-and-screen-time</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/dangers-of-blue-light-and-screen-time</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/the-health-secret-of-samurai-warriors</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: The Health Secret of Samurai Warriors, https://www.objectivewellness.com/journal/posts/the-health-secret-of-samurai-warriors</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/the-health-secret-of-samurai-warriors</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/the-epic-antioxidant-power-of-astaxanthin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: The Epic Antioxidant Power of Astaxanthin, https://www.objectivewellness.com/journal/posts/the-epic-antioxidant-power-of-astaxanthin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/the-epic-antioxidant-power-of-astaxanthin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/4-reasons-behind-moms-ginger-ale-go-to-for-a-stomachache-that-she-likely</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: 4 Reasons Behind Mom’s Ginger Ale Go-To for a Stomachache (That She Likely Never Knew)  , https://www.objectivewellness.com/journal/posts/4-reasons-behind-moms-ginger-ale-go-to-for-a-stomachache-that-she-likely</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/4-reasons-behind-moms-ginger-ale-go-to-for-a-stomachache-that-she-likely</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/not-your-average-blueberry-and-how-your-chardonnay-could-make-you-smarter</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Not Your Average Blueberry...and How Your Chardonnay Could Make You Smarter, https://www.objectivewellness.com/journal/posts/not-your-average-blueberry-and-how-your-chardonnay-could-make-you-smarter</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/not-your-average-blueberry-and-how-your-chardonnay-could-make-you-smarter</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/5-things-you-need-to-know-before-trying-collagen-for-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: 5 Things You Need to Know Before Trying Collagen for Your Skin, https://www.objectivewellness.com/journal/posts/5-things-you-need-to-know-before-trying-collagen-for-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/5-things-you-need-to-know-before-trying-collagen-for-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/the-bee-glue-secret-to-stronger-immune-health</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: The “Bee Glue” Secret to Stronger Immune Health, https://www.objectivewellness.com/journal/posts/the-bee-glue-secret-to-stronger-immune-health</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/the-bee-glue-secret-to-stronger-immune-health</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/hiit-hype-or-helpful-weight-loss-and-other-weight-loss-trends-actually</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HIIT: Hype or Helpful Weight Loss? And Other Trends Actually Worth a Shot, https://www.objectivewellness.com/journal/posts/hiit-hype-or-helpful-weight-loss-and-other-weight-loss-trends-actually</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/hiit-hype-or-helpful-weight-loss-and-other-weight-loss-trends-actually</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/the-smoothie-that-smooths-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: The Smoothie That Smooths Your Skin, https://www.objectivewellness.com/journal/posts/the-smoothie-that-smooths-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/the-smoothie-that-smooths-your-skin</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/5-minute-fix-for-better-focus</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>1</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: 5-Minute Fix for Better Focus, https://www.objectivewellness.com/journal/posts/5-minute-fix-for-better-focus</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/5-minute-fix-for-better-focus</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/behind-the-buzz-antioxidants-the-superheroes-of-your-cells</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Behind the Buzz: Antioxidants, the Superheroes of Your Cells, https://www.objectivewellness.com/journal/posts/behind-the-buzz-antioxidants-the-superheroes-of-your-cells</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/behind-the-buzz-antioxidants-the-superheroes-of-your-cells</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/pros-and-cons-of-the-big-6-hormone-helping-herbs-for-hot-flashes-mood-and</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HEALTH AND WELLNESS, https://www.objectivewellness.com/journal/category/health-and-wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Pros & Cons of the Big 6 Hormone-Helping Herbs for Hot Flashes, Mood and More, https://www.objectivewellness.com/journal/posts/pros-and-cons-of-the-big-6-hormone-helping-herbs-for-hot-flashes-mood-and</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/pros-and-cons-of-the-big-6-hormone-helping-herbs-for-hot-flashes-mood-and</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/journal/posts/a-study-in-studies-what-science-backed-really-means</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: SCIENCE, https://www.objectivewellness.com/journal/category/science</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: A Study in Studies: What “Science-Backed” Really Means, https://www.objectivewellness.com/journal/posts/a-study-in-studies-what-science-backed-really-means</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: READ MORE, https://www.objectivewellness.com/journal/posts/a-study-in-studies-what-science-backed-really-means</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: ABOUT, https://www.objectivewellness.com/about_us</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: HELP, https://www.objectivewellness.com/faq</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Contact Us, https://www.objectivewellness.com/contact</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: FAQs, https://www.objectivewellness.com/faq</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: My Account, https://www.objectivewellness.com/login/account</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Shipping & Returns, https://www.objectivewellness.com/faq</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: Track An Order, https://www.objectivewellness.com/login/order</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.instagram.com/objective_wellness</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.facebook.com/Objective_Wellness-114299813287253/</td>
+<td></td>
+<td>1</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: PRIVACY POLICY, https://www.thecloroxcompany.com/privacy/</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: TERMS OF USE, https://www.objectivewellness.com/terms</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: MEMBER OF THE CLX FAMILY OF BRANDS, https://thecloroxcompany.com/brands</td>
+<td></td>
+<td>4</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/login</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+<tr>
+<td title='links.httpURLConnection.testCheckLinks()'><b>testCheckLinks</b><br>Test class: links.httpURLConnection<br>Parameters: , https://www.objectivewellness.com/signup</td>
+<td></td>
+<td>0</td>
+<td>links.httpURLConnection@204f30ec</td></tr>
+</table><p>
+</body>
+</html>
