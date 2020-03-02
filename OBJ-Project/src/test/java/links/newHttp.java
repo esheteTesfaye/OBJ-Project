@@ -11,12 +11,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class httpURLConnection {
+public class newHttp {
 
 	public static int brokenLinks;
 	public static int validLinks;
@@ -26,18 +27,20 @@ public class httpURLConnection {
 	@BeforeClass
 	public void openobj() {
 
-		url = "https://newtours.demoaut.com/";
+		url = "https://www.stopagingnow.com/";
+		// url = "https://www.thecloroxcompany.com/privacy/";
 		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
-		// System.setProperty("webdriver.gecko.driver",utility.DriverPath.firefoxDriver);
+		// System.setProperty("webdriver.gecko.driver",
+		// utility.DriverPath.firefoxDriver);
+		// driver = new ChromeDriver();
 		driver = new ChromeDriver();
-		// driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 
 	@AfterClass
 	public void closeTheBrowser() {
-		// driver.close();
+		driver.close();
 	}
 
 	// @Test
@@ -54,29 +57,33 @@ public class httpURLConnection {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			if (statusCode == 404) {
-				++brokenLinks;
-			} else {
+			if (statusCode >= 200 && statusCode < 300) {
 				++validLinks;
+			} else {
+				++brokenLinks;
 			}
 		}
 
-		System.out.println("Total broken links found# " + brokenLinks);
-		System.out.println("Total valid links found#" + validLinks);
+		System.out.println("Total broken links found=============================# " + brokenLinks);
+		System.out.println("Total valid links found...====================#" + validLinks);
 
 	}
 
 	@Test(dataProvider = "dp")
 	public void testCheckLinks(String text, String link) {
 		// Test to validate if a link URL is working or not
+		String exp = "Not";
 		int actualStatusCode = verifyURLStatus(link);
-		org.testng.Assert.assertEquals(actualStatusCode, 200);
+
+		if (actualStatusCode >= 200 && actualStatusCode < 300) {
+			exp = "OK";
+		}
+		Assert.assertEquals(exp, "OK");
 
 	}
 
 	@DataProvider
 	public Object[][] dp() throws IOException {
-		// Prepare the path of excel file
 
 		// Call read file method of the class to read data
 		String[][] alllinks = getAllLinksOfThePages(url);
@@ -117,7 +124,7 @@ public class httpURLConnection {
 	// @Test
 	public static int verifyURLStatus(String urlString) {
 
-		int status = 404;
+		int status = 0;
 		try {
 			URL link = new URL(urlString);
 			HttpURLConnection hConn = null;
