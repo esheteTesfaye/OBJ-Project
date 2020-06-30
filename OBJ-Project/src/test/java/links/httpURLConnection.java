@@ -17,6 +17,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class httpURLConnection {
+	/*
+	 * how to easly inter a comment in eclipse
+	 */
 
 	public static int brokenLinks;
 	public static int validLinks;
@@ -31,8 +34,10 @@ public class httpURLConnection {
 		// System.setProperty("webdriver.gecko.driver",utility.DriverPath.firefoxDriver);
 		driver = new ChromeDriver();
 		// driver = new FirefoxDriver();
+		// driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+
 	}
 
 	@AfterClass

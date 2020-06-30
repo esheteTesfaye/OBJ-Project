@@ -27,7 +27,7 @@ public class newHttp {
 	@BeforeClass
 	public void openobj() {
 
-		url = "https://www.stopagingnow.com/";
+		url = "https://www.objectivewellness.com/";
 		// url = "https://www.thecloroxcompany.com/privacy/";
 		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		// System.setProperty("webdriver.gecko.driver",
